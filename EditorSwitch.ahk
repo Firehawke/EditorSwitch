@@ -70,7 +70,7 @@ Process, Exist, Code.exe ; check to see if VSCode is running
 		; VSCode is currently running, so we use it.
 		; This should be changed later to do a scan for code.exe since you may
 		; have an insider build or Codium that you'd want it to detect and use.
-		RunWait,"%A_ProgramFiles%\Microsoft VS Code\Code.exe" "%LongPath%"
+		RunWait,"%A_ProgramFiles%\Microsoft VS Code\Code.exe" "--wait %LongPath%"
 		Return
 	}
 }

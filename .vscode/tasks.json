@@ -4,6 +4,23 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "Compile",
+			"type": "shell",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+            "isBackground": true,
+            "presentation": {
+                "echo": false,
+                "reveal": "never",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": false
+            },
+            "command": "C:\\ProgramData\\chocolatey\\bin\\Ahk2Exe.exe /in \"EditorSwitch.ahk /out EditorSwitch.exe\"",
+        },
+        {
             "label": "Copy compiled script to Utils",
             "type": "shell",
             "isBackground": true,
@@ -16,6 +33,23 @@
                 "clear": false
             },
             "command": "copy EditorSwitch.exe c:\\utils"
+        },
+        {
+            "label": "Compile and Copy",
+			"type": "shell",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+            "isBackground": true,
+            "presentation": {
+                "echo": false,
+                "reveal": "never",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": false
+            },
+            "command": "C:\\ProgramData\\chocolatey\\bin\\Ahk2Exe.exe /in \"EditorSwitch.ahk /out EditorSwitch.exe\" && copy EditorSwitch.exe c:\\utils",
         }
     ]
 }
